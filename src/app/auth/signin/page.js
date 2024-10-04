@@ -15,9 +15,9 @@ const Login = () => {
   const {
     control,
     handleSubmit,
-    formState: { errors }
-  } = useForm(  {
-    resolver:yupResolver(SignInValidation)
+    formState: { errors },
+  } = useForm({
+    resolver: yupResolver(SignInValidation),
   });
   const router = useRouter();
 
@@ -68,14 +68,13 @@ const Login = () => {
             <div>
               <FormControl>
                 <InputField
-                errors={errors}
+                  errors={errors}
                   className="w-96 ml-5"
                   label="Username"
                   control={control}
                   name="username"
                   type="text"
-                  placeholder="example123@gmail.com"
-                
+                  placeholder="emilys"
                 />
               </FormControl>
             </div>
@@ -83,11 +82,12 @@ const Login = () => {
             <div>
               <FormControl>
                 <InputField
-                errors={errors}
+                  errors={errors}
                   className="w-96 ml-5"
                   control={control}
                   name="password"
                   type="password"
+                  placeholder="emilyspass"
                   label="Password"
                 />
               </FormControl>
